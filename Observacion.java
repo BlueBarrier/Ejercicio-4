@@ -67,7 +67,7 @@ public class Observacion {
     }
 
     /**
-     * 
+     * método que muestra una lista de estrellas por tipo
      */
     public void listaEstrellas(){
         ArrayList<Estrella> tipoO = new ArrayList<>();
@@ -194,7 +194,23 @@ public class Observacion {
         }
     }
 
-    public void mostrarObservaciones(){}
+    /**
+     * método para mostar todas las observaciones
+     */
+    public void mostrarObservaciones(){
+        for (ObjetoCeleste observacion : objetosObservados) {
+            System.out.println("\nObservaciones:");
+            System.out.println(observacion);
+        }
+        for (Estrella estrella : estrellasObservadas) {
+            System.out.println(estrella);
+        }
+        for (Galaxia galaxia : galaxiasObservadas) {
+            System.out.println(galaxia);
+        }
+    }
 
-    public void galaxiasTipo(){}
+    public void galaxiasTipo(){
+        
+    }
 }
