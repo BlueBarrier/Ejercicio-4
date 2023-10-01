@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Observacion {
     private Scanner scan;
-    private EntradaDatos entrada = new EntradaDatos(scan);
+    private EntradaDatos entrada = new EntradaDatos();
     private ArrayList<ObjetoCeleste> objetosObservados;
     private ArrayList<Estrella> estrellasObservadas;
     private ArrayList<Galaxia> galaxiasObservadas;

@@ -2,8 +2,7 @@
 import java.util.Scanner;
 
 public class EntradaDatos {
-    private Scanner scan;
-    public EntradaDatos(Scanner scan){this.scan = scan;}
+    private Scanner scan = new Scanner(System.in);
     public int pedirTipo(){
         System.out.println("Ingrese el número de la observación que observo: "+
                                     "\n1. Estrellas"+
