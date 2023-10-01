@@ -63,8 +63,6 @@ public class Observacion {
 
     public void listaEstrellas(){}
 
-    public void cantidadEstrellas(){}
-
     public void mostrarObservaciones(){}
 
     public void galaxiasTipo(){}

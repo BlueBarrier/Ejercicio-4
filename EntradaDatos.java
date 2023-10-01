@@ -129,6 +129,19 @@ public class EntradaDatos {
     }
     public int menu(){
         System.out.println("\nMenú"+
-                        "\n1.");
+                        "\n1. Registrar una nueva observación"+
+                        "\n2. Mostrar todas las observaciones registradas"+
+                        "\n3. Listar estrellas observadas según su tipo espectral"+
+                        "\n4. Galaxias por tipo"+
+                        "\n5. Salir");
+        try {
+            int opcion = scan.nextInt();
+            scan.nextLine();
+            return opcion;
+        } catch (Exception e) {
+            System.out.println("Ingrese una opción valida");
+            menu();
+        }
+        return 0;
     }
 }

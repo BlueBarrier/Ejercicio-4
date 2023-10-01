@@ -13,18 +13,15 @@ public class Main {
                     observacion.registrarObservacion();
                     break;
                 case 2:
-                    observacion.listaEstrellas();
-                    break;
-                case 3:
-                    observacion.cantidadEstrellas();
-                    break;
-                case 4:
                     observacion.mostrarObservaciones();
                     break;
-                case 5:
+                case 3:
+                    observacion.listaEstrellas();
+                    break;
+                case 4:
                     observacion.galaxiasTipo();
                     break;
-                case 6:
+                case 5:                    
                     System.out.println("Gracias por usar el programa!");
                     out = true;
                 default:
