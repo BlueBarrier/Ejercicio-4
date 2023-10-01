@@ -22,11 +22,41 @@ public class Observacion {
             case 1:
                 estrellasObservadas.add(
                     new Estrella(entrada.nombreAstronomo(), entrada.fechaObservacion(), entrada.magnitud(), "Estrella",
-                    entrada.telescopio(), null, entrada.tipoEspectral())
+                    entrada.telescopio(), entrada.coordenadas(), entrada.tipoEspectral())
                 );
                 break;
-        
+            case 2: 
+                objetosObservados.add(
+                    new ObjetoCeleste(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Planeta",
+                    entrada.telescopio(),entrada.coordenadas())
+                );
+                break;
+            case 3:
+                galaxiasObservadas.add(
+                    new Galaxia(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Galaxia",
+                    entrada.telescopio(),entrada.coordenadas(), null, 0)
+                );
+                break;
+            case 4:
+                objetosObservados.add(
+                    new ObjetoCeleste(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Nebulosa", 
+                    entrada.telescopio(),entrada.coordenadas())
+                );
+                break;
+            case 5:
+                objetosObservados.add(
+                    new ObjetoCeleste(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Cometa", 
+                    entrada.telescopio(),entrada.coordenadas())
+                );
+                break;
+            case 6:
+                objetosObservados.add(
+                    new ObjetoCeleste(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Asteroide", 
+                    entrada.telescopio(),entrada.coordenadas())
+                );
+                break;                
             default:
+                System.out.println("Opción invalida");
                 break;
         }
     }

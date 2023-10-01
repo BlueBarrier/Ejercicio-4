@@ -2,7 +2,7 @@ public class Galaxia extends ObjetoCeleste {
     private String tipo;
     private int distancia;
 
-    public Galaxia(String nombre, String fecha, float magnitudAparente, String tipoObjetoCeleste, String telescopio, int[] coordenadas, String tipoGalaxia, int distancia) {
+    public Galaxia(String nombre, String fecha, float magnitudAparente, String tipoObjetoCeleste, String telescopio, float[] coordenadas, String tipoGalaxia, int distancia) {
         super(nombre, fecha, magnitudAparente, tipoObjetoCeleste, telescopio, coordenadas);
         this.tipo = tipoGalaxia;
         this.distancia = distancia;

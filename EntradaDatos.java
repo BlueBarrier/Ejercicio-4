@@ -9,7 +9,7 @@ public class EntradaDatos {
                                     "\n1. Estrellas"+
                                     "\n2. Planeta"+
                                     "\n3. Galaxia"+
-                                    "\n4. Nebulos"+
+                                    "\n4. Nebulosa"+
                                     "\n5. Cometa"+
                                     "\n6. Asteroide");
         String opcString = scan.nextLine().trim().toLowerCase();
@@ -104,7 +104,27 @@ public class EntradaDatos {
         return "";
     }
 
-    public int[] coordenadas(){
-        
+    public float[] coordenadas(){
+        System.out.println("Ingrese la ascensión recta: ");
+        try {
+            float recta = scan.nextFloat();
+            scan.nextLine();
+            try {
+                System.out.println("Ingrese la declinación: ");
+                float declina = scan.nextFloat();
+                scan.nextLine();
+                float[] coords = new float[2];
+                coords[0] = recta;
+                coords[1] = declina; 
+                return coords;
+            } catch (Exception e) {
+                System.out.println("Ingrese una declinación valida");
+                coordenadas();
+            }
+        } catch (Exception e) {
+            System.out.println("Ingrese una ascención valida");
+            coordenadas();
+        }
+        return null;
     }
 }

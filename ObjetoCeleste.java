@@ -15,7 +15,7 @@ public class ObjetoCeleste{
     // creación de los atributos de clase
     protected String nombre, fecha, tipo, telescopio; 
     protected float magnitudAparente;
-    protected int[] coordenadas;
+    protected float[] coordenadas;
 
     /**
      * Constructor de la clase que inicializa sus atributos
@@ -27,7 +27,7 @@ public class ObjetoCeleste{
      * @param coordenadas               Coordenadas de ascensión recta y declinación
      * @param telescopio                Telescopio con el que fue observado
      */
-    public ObjetoCeleste(String nombre, String fecha, float magnitudAparente, String tipo, String telescopio, int[] coordenadas){
+    public ObjetoCeleste(String nombre, String fecha, float magnitudAparente, String tipo, String telescopio, float[] coordenadas){
         this.nombre = nombre;
         this.fecha = fecha;
         this.magnitudAparente = magnitudAparente;
@@ -55,7 +55,7 @@ public class ObjetoCeleste{
     /**
      * @return coordenadas      Atríbuto lista de coordenadas
      */
-    public int[] getCoordenadas() {
+    public float[] getCoordenadas() {
         return coordenadas;
     }
     /**
@@ -63,7 +63,7 @@ public class ObjetoCeleste{
      * 
      * @param coordenadas
      */
-    public void setCoordenadas(int[] coordenadas) {
+    public void setCoordenadas(float[] coordenadas) {
         this.coordenadas = coordenadas;
     }
 
