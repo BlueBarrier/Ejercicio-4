@@ -66,7 +66,133 @@ public class Observacion {
         }
     }
 
-    public void listaEstrellas(){}
+    /**
+     * 
+     */
+    public void listaEstrellas(){
+        ArrayList<Estrella> tipoO = new ArrayList<>();
+        ArrayList<Estrella> tipoB = new ArrayList<>();
+        ArrayList<Estrella> tipoA = new ArrayList<>();
+        ArrayList<Estrella> tipoF = new ArrayList<>();
+        ArrayList<Estrella> tipoG = new ArrayList<>();
+        ArrayList<Estrella> tipoK = new ArrayList<>();
+        ArrayList<Estrella> tipoM = new ArrayList<>();
+        ArrayList<ArrayList<Estrella>> listaEstrellas = new ArrayList<>();
+        for (Estrella estrella : estrellasObservadas) {
+            if (estrella.getTipoEspectral() == "O") {
+                tipoO.add(estrella);
+            } else if(estrella.getTipoEspectral() == "B") {
+                tipoB.add(estrella);
+            } else if(estrella.getTipoEspectral() == "A"){
+                tipoA.add(estrella);
+            }else if(estrella.getTipoEspectral() == "F"){
+                tipoF.add(estrella);
+            }else if(estrella.getTipoEspectral() == "G"){
+                tipoG.add(estrella);
+            }else if(estrella.getTipoEspectral() == "K"){
+                tipoK.add(estrella);
+            }else if(estrella.getTipoEspectral() == "M"){
+                tipoM.add(estrella);
+            }
+        }
+        try {
+            listaEstrellas.add(tipoO);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoB);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoA);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoF);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoG);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoK);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        try {
+            listaEstrellas.add(tipoM);
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        for (ArrayList<Estrella> tipos : listaEstrellas) {
+            int count = 0;
+            for (Estrella star : tipos) {
+                if (star.getTipoEspectral() == "O") {
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo O: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "B"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo B: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "A"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo A: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "F"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo F: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "G"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo G: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "K"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo K: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }else if(star.getTipoEspectral() == "M"){
+                    if (count == 0) {
+                        System.out.println("\n Estrellas tipo M: ");
+                        System.out.println(star);
+                        count++;
+                    }else{
+                        System.out.println(star);
+                    }
+                }
+            }
+        }
+    }
 
     public void mostrarObservaciones(){}
 
