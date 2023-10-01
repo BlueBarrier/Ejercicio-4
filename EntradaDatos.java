@@ -3,6 +3,9 @@ import java.util.Scanner;
 
 public class EntradaDatos {
     private Scanner scan = new Scanner(System.in);
+    /**
+     * @return
+     */
     public int pedirTipo(){
         System.out.println("Ingrese el número de la observación que observo: "+
                                     "\n1. Estrellas"+
@@ -23,6 +26,9 @@ public class EntradaDatos {
         return opcion;
     }
 
+    /**
+     * @return
+     */
     public String nombreAstronomo(){
         System.out.println("Ingrese el nombre del astrónomo: ");
         String name = scan.nextLine();
@@ -30,6 +36,9 @@ public class EntradaDatos {
         return name;
     }
 
+    /**
+     * @return
+     */
     public String fechaObservacion(){
         System.out.println("Ingrese la fecha de la observación con el siguiente formato (dd/mm/aaaa): ");
         String fecha = scan.nextLine();
@@ -37,6 +46,9 @@ public class EntradaDatos {
         return fecha;
     }
 
+    /**
+     * @return
+     */
     public float magnitud(){
         System.out.println("Ingrese la magnitud aparente de la observación: ");
         try {
@@ -51,6 +63,9 @@ public class EntradaDatos {
         return magnitud;
     }
 
+    /**
+     * @return
+     */
     public String telescopio(){
         System.out.println("Ingrese el nombre del telescopio utilizado para la observación: ");
         String telescope = scan.nextLine();
@@ -58,6 +73,9 @@ public class EntradaDatos {
         return telescope;
     }
 
+    /**
+     * @return
+     */
     public String tipoEspectral(){
         System.out.println("Seleccione el tipo espectral de la estrella: "+
                                 "\n1.O"+
@@ -103,6 +121,9 @@ public class EntradaDatos {
         return "";
     }
 
+    /**
+     * @return
+     */
     public float[] coordenadas(){
         System.out.println("Ingrese la ascensión recta: ");
         try {
@@ -126,6 +147,54 @@ public class EntradaDatos {
         }
         return null;
     }
+
+    /**
+     * @return
+     */
+    public String tipoGalaxia(){
+        System.out.println("Seleccione el tipo de galaxia"+
+                                "\n1. Espiral"+
+                                "\n2. Elíptica"+
+                                "\n3. Irregular");
+        try {
+            int opcion = scan.nextInt();
+            scan.nextLine();
+            switch (opcion) {
+                case 1:
+                    return "Espiral";
+                case 2:
+                    return "Elíptica";
+                case 3:
+                    return "Irregular";
+                default:
+                System.out.println("Ingrese una opción valida");
+                tipoGalaxia();                    
+            }
+        } catch (Exception e) {
+            System.out.println("Ingrese una opción valida");
+            tipoGalaxia();
+        }
+        return "";
+    }
+
+    /**
+     * @return
+     */
+    public int lightYears(){
+        System.out.println("Ingrese la distancia de la galaxia en años luz: ");
+        try {
+            int luz = scan.nextInt();
+            return luz;
+        } catch (Exception e) {
+            System.out.println("Ingrese un valor valido");
+            lightYears();
+        }
+        return 0;
+    }
+
+    /**
+     * @return
+     */
     public int menu(){
         System.out.println("\nMenú"+
                         "\n1. Registrar una nueva observación"+

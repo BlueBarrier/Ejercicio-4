@@ -39,7 +39,7 @@ public class Observacion {
             case 3:
                 galaxiasObservadas.add(
                     new Galaxia(entrada.nombreAstronomo(), entrada.fechaObservacion(),entrada.magnitud(), "Galaxia",
-                    entrada.telescopio(),entrada.coordenadas(), null, 0)
+                    entrada.telescopio(),entrada.coordenadas(), entrada.tipoGalaxia(), entrada.lightYears())
                 );
                 break;
             case 4:
