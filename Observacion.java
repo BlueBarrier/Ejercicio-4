@@ -1,14 +1,16 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 public class Observacion {
-    private Scanner scan;
     private EntradaDatos entrada = new EntradaDatos();
     private ArrayList<ObjetoCeleste> objetosObservados;
     private ArrayList<Estrella> estrellasObservadas;
     private ArrayList<Galaxia> galaxiasObservadas;
 
-    public Observacion(Scanner scan, ArrayList<ObjetoCeleste> objetosObseravdos, ArrayList<Estrella> estrellasObservadas, ArrayList<Galaxia> galaxiasObservadas){
-        this.scan = scan;
+    /**
+     * @param objetosObseravdos
+     * @param estrellasObservadas
+     * @param galaxiasObservadas
+     */
+    public Observacion(ArrayList<ObjetoCeleste> objetosObseravdos, ArrayList<Estrella> estrellasObservadas, ArrayList<Galaxia> galaxiasObservadas){
         this.objetosObservados = objetosObseravdos;
         this.estrellasObservadas = estrellasObservadas;
         this.galaxiasObservadas = galaxiasObservadas;
@@ -17,6 +19,9 @@ public class Observacion {
 
 
 
+    /**
+     * clase que registra una observación en base a la opción realizada por el usuario
+     */
     public void registrarObservacion(){
         switch (entrada.pedirTipo()) {
             case 1:

@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         EntradaDatos entrada = new EntradaDatos(); 
-        Observacion observacion = new Observacion(scan, new ArrayList<ObjetoCeleste>(), 
+        Observacion observacion = new Observacion(new ArrayList<ObjetoCeleste>(), 
         new ArrayList<Estrella>(), new ArrayList<Galaxia>());
         boolean out = false;
         do {
