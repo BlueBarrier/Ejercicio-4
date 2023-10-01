@@ -127,4 +127,8 @@ public class EntradaDatos {
         }
         return null;
     }
+    public int menu(){
+        System.out.println("\nMenú"+
+                        "\n1.");
+    }
 }
