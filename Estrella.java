@@ -13,4 +13,15 @@ public class Estrella extends ObjetoCeleste {
     public void setTipoEspectral(String tipoEspectral) {
         this.tipoEspectral = tipoEspectral;
     }
+
+    @Override
+    public String toString(){
+        return "Tipo de Objeto: "+tipo+
+                "\nTipo Espectral: "+tipoEspectral+
+                "\nMagnitud: "+magnitudAparente+
+                "\nCoordenadas: "+coordenadas+
+                "\nFecha: "+fecha+
+                "\nTelescopio: "+telescopio+
+                "\nAstrónomo: "+nombre;
+    }
 }

@@ -210,7 +210,25 @@ public class Observacion {
         }
     }
 
+    /**
+     * método que muestra el conteo de tipos de galaxias
+     */
     public void galaxiasTipo(){
-        
+        int conteoEspiral = 0;
+        int conteoEliptica = 0;
+        int conteoIrregular = 0;
+
+        for (Galaxia galaxy : galaxiasObservadas) {
+            if (galaxy.getTipoGalaxia() == "Espiral") {
+                conteoEspiral++;
+            }else if (galaxy.getTipoGalaxia() == "Elíptica") {
+                conteoEliptica++;
+            }else if (galaxy.getTipoGalaxia() == "Irregular") {
+                conteoIrregular++;
+            }
+        }
+        System.out.println("\nEspirales: "+conteoEspiral);
+        System.out.println("Elíptica: "+conteoEliptica);
+        System.out.println("Irregular: "+conteoIrregular);
     }
 }

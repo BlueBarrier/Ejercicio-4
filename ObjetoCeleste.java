@@ -136,4 +136,14 @@ public class ObjetoCeleste{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString(){
+        return "Tipo de Objeto: "+tipo+
+                "\nMagnitud: "+magnitudAparente+
+                "\nCoordenadas: "+coordenadas+
+                "\nFecha: "+fecha+
+                "\nTelescopio: "+telescopio+
+                "\nAstrónomo: "+nombre;
+    }
 }
